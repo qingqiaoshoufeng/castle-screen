@@ -19,13 +19,15 @@ importers:
         specifier: ^3.4.21
         version: 3.4.21
 
-  packages/castle-components: {}
+  packages/caslte-components: {}
+
+  packages/castle-chart: {}
 
   playground:
     dependencies:
       '@castle-screen/castle-components':
         specifier: ^1.0.0
-        version: link:../packages/castle-components
+        version: link:../packages/castle-chart
       vite:
         specifier: ^5.2.8
         version: 5.2.8
