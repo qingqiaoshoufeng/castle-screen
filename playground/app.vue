@@ -3,7 +3,6 @@
     playground根页面
     <div class="demo">
       <caDemo />
-      <demo />
     </div>
   </div>
 </template>
