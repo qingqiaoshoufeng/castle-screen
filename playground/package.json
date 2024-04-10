@@ -5,6 +5,7 @@
     "dev": "vite"
   },
   "dependencies": {
+    "@castle-screen/castle-chart": "^1.0.0",
     "@castle-screen/castle-components": "^1.0.0",
     "vite": "^5.2.8"
   }
