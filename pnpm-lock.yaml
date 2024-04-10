@@ -19,13 +19,13 @@ importers:
         specifier: ^3.4.21
         version: 3.4.21
 
-  packages/caslte-components: {}
+  packages/castle-components: {}
 
   playground:
     dependencies:
-      '@caslte-screen/caslte-components':
+      '@castle-screen/castle-components':
         specifier: ^1.0.0
-        version: link:../packages/caslte-components
+        version: link:../packages/castle-components
       vite:
         specifier: ^5.2.8
         version: 5.2.8
