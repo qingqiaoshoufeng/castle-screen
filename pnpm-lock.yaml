@@ -19,7 +19,16 @@ importers:
         specifier: ^3.4.21
         version: 3.4.21
 
-  playground: {}
+  packages/caslte-components: {}
+
+  playground:
+    dependencies:
+      '@caslte-screen/caslte-components':
+        specifier: ^1.0.0
+        version: link:../packages/caslte-components
+      vite:
+        specifier: ^5.2.8
+        version: 5.2.8
 
 packages:
 
