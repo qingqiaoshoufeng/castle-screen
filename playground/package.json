@@ -1,0 +1,10 @@
+{
+  "name": "@castle/playground",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@caslte-screen/caslte-components": "^1.0.0"
+  }
+}
