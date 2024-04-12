@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"pnpm --filter @castle/playground run dev"
+    "dev": "pnpm --filter @castle/playground run dev",
+    "build:theme": "pnpm --filter @castle-screen/theme-chalk build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "path": "^0.12.7",
+    "sass": "^1.74.1",
+    "sucrase": "^3.35.0",
     "vue": "^3.4.21"
   },
   "dependencies": {
