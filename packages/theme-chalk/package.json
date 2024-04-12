@@ -1,0 +1,36 @@
+{
+  "name": "@castle-screen/theme-chalk",
+  "version": "0.1.0",
+  "description": "Element component chalk theme.",
+  "keywords": [
+    "vue-components",
+    "castle-screen",
+    "theme-chalk",
+    "theme-light"
+  ],
+  "homepage": "https://github.com/castle-screen/castle-screen/blob/dev/packages/theme-chalk/README.md",
+  "bugs": {
+    "url": "https://github.com/castle-screen/castle-screen#issues"
+  },
+  "license": "MIT",
+  "author": "yi.shyang@ele.me",
+  "main": "index.css",
+  "unpkg": "index.css",
+  "jsdelivr": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/castle-screen/castle-screen.git"
+  },
+  "style": "index.css",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.74.1",
+    "sucrase": "^3.35.0"
+  }
+}
