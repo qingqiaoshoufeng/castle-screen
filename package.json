@@ -6,8 +6,7 @@
   "scripts": {
     "playground:dev": "pnpm --filter @castle/playground run dev",
     "dev:theme": "pnpm --filter @castle-screen/theme-chalk dev",
-    "dev": "pnpm playground:dev && pnpm dev:theme",
-    "dev1": "concurrently 'pnpm playground:dev' 'pnpm dev:theme'",
+    "dev": "concurrently 'pnpm playground:dev' 'pnpm dev:theme'",
     "build:theme": "pnpm --filter @castle-screen/theme-chalk build"
   },
   "keywords": [],
