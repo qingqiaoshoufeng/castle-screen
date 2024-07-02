@@ -29,7 +29,7 @@ defineOptions({
 <template>
 <div class="lay-out">
   <div class="left">
-    <div class="menu-item" v-for="item in componentsMap" :class="{selected:item.name === currentComponent.name}" :key="item.label" @click="trigger(item)">
+    <div class="menu-item" v-for="item in componentsMap" :class="{selected:item.name === currentComponent?.name}" :key="item.label" @click="trigger(item)">
       {{ item.label || item.name }}
     </div>
   </div>
