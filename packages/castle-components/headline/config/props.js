@@ -14,20 +14,16 @@ export const propsConfig = {
     default: () => ({}),
     type: Object,
   },
-  ratioHeight: {
-    default: 100,
-    type: Number,
-  },
-  ratioWidth: {
+  width: {
     default: 1920,
     type: Number,
   },
-  width: {
-    default: null,
-    type: Number,
-  },
   height: {
-    default: null,
+    default: 100,
     type: Number,
   },
+  biType: {
+    default: null,
+    type: String,
+  }
 };
