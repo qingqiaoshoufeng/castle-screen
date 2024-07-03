@@ -1,11 +1,12 @@
 import { series, src, dest } from 'gulp'
 import gulpSass from 'gulp-sass' // 处理sass
-import dartSass from 'sass'
+import * as dartSass from 'sass'
 import autoprefixer from 'gulp-autoprefixer' // 添加前缀
 import cleanCSS from 'gulp-clean-css' // 压缩css
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import watch from 'gulp-watch'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -29,4 +30,11 @@ const buildStyle = series(
     // copyfont,
     // copyStyle
 )
+
+
+export const dev = ()=>{
+    watch('./src/**', (event)=> {
+        compile()
+    });
+}
 export default buildStyle

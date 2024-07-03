@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @castle/playground run dev",
+    "playground:dev": "pnpm --filter @castle/playground run dev",
+    "dev:theme": "pnpm --filter @castle-screen/theme-chalk dev",
+    "dev": "concurrently 'pnpm playground:dev' 'pnpm dev:theme'",
     "build:theme": "pnpm --filter @castle-screen/theme-chalk build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
     "path": "^0.12.7",
     "sass": "^1.74.1",
     "sucrase": "^3.35.0",

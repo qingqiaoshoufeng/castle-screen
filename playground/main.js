@@ -1,6 +1,5 @@
 import {createApp} from 'vue';
 import App from './app.vue'
-import {caDemo} from '@castle-screen/castle-components'
+import './assets/base.scss'
 const app = createApp(App)
-app.use(caDemo)
 app.mount('#app') 

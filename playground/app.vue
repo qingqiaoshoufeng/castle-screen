@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    playground根页面
-    <div class="demo">
-      <caDemo />
-    </div>
+    <lay-out />
+      <!-- <card-frame />
+      <Headline /> -->
   </div>
 </template>
 <script setup>
-import demo from './components/demo.vue'
+import LayOut from './lay-out/index.vue'
 </script>
+
+<style scoped lang="scss">
+
+</style>
