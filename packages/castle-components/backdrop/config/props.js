@@ -19,7 +19,7 @@ export const propsConfig = {
     type: Number,
   },
   height: {
-    default: 100,
+    default: 1080,
     type: Number,
   },
   biType: {

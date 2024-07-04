@@ -7,7 +7,6 @@ import center3 from '../assets/center-3.svg';
 import left1 from '../assets/left-1.svg';
 import left2 from '../assets/left-2.svg';
 const props = defineProps(propsConfig);
-const slots = useSlots();
 
 const bgImg = computed(() => {
   const biMap = {
@@ -22,32 +21,6 @@ const bgImg = computed(() => {
 
 // 容器样式
 const boxStyle = computed(() => {
-  const biStyleMap = {
-    centerOne: {
-      height: 108,
-      width: 1920,
-    },
-    centerTwo: {
-      height: 100,
-      width: 1920,
-    },
-    centerThree: {
-      height: 157,
-      width: 1920,
-    },
-    leftOne: {
-      height: 90,
-      width: 1920,
-    },
-    leftTwo: {
-      height: 96,
-      width: 1946,
-    },
-  };
-  const config = biStyleMap[props.biType] || {
-    height: props.height,
-    width: props.width,
-  };
   return {
     height: `${config.height}px`,
     width: `${config.width}px`,
