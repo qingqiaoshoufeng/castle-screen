@@ -7,13 +7,6 @@ export const propsConfig = {
     default: '',
     type: String,
   },
-  titleStyle:{
-    type: Object,
-  },
-  bgStyle: {
-    default: () => ({}),
-    type: Object,
-  },
   width: {
     default: 1920,
     type: Number,
@@ -22,8 +15,16 @@ export const propsConfig = {
     default: 1080,
     type: Number,
   },
+  mode:{
+    default: 'contain',
+    type: [String,Array],
+  },
   biType: {
     default: null,
+    type: String,
+  },
+  name:{
+    default:'ROOT_BOX',
     type: String,
   }
 };

@@ -1,37 +1,39 @@
 <script setup>
 import { propsConfig } from '../config';
 import { useSlots, computed } from 'vue';
-import center1 from '../assets/center-1.svg';
-import center2 from '../assets/center-2.svg';
-import center3 from '../assets/center-3.svg';
-import left1 from '../assets/left-1.svg';
-import left2 from '../assets/left-2.svg';
+import one from '../assets/one.png';
+import two from '../assets/two.png';
+import three from '../assets/three.png';
+import four from '../assets/four.png';
+import five from '../assets/five.png';
+import useBackGround from '../hooks/useBackGround.js'
 const props = defineProps(propsConfig);
-
+const {state,extraBgStyle} = useBackGround({props})
+console.log(state);
 const bgImg = computed(() => {
   const biMap = {
-    centerOne: center1,
-    centerTwo: center2,
-    centerThree: center3,
-    leftOne: left1,
-    leftTwo: left2,
+    one,
+    two,
+    three,
+    four,
+    five,
   };
-  return biMap[props.biType] || props.backgroundImg || biMap.centerTwo;
+  return biMap[props.biType] || props.backgroundImg || biMap.one;
 });
 
-// 容器样式
-const boxStyle = computed(() => {
+const bgStyle = computed(() => {
   return {
-    height: `${config.height}px`,
-    width: `${config.width}px`,
-  };
+    width:`${props.width}px`,
+    height:`${props.height}px`
+  }
 });
+
 </script>
 <template>
-  <div class="castle-backdrop" :class="biType" :style="boxStyle">
+  <div class="castle-backdrop" :class="biType" :id="name">
     <div
       class="castle-backdrop_bg"
-      :style="{ 'background-image': `url(${bgImg})`, ...bgStyle }"
+      :style="{ 'background-image': `url(${bgImg})`,...extraBgStyle,...bgStyle }"
     >
       <slot />
     </div>

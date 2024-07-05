@@ -1,53 +1,32 @@
 <template>
   <div class="wrapper">
-    <div class="title">默认样式</div>
-    <ca-headline />
-    <div class="title">使用一:不使用插槽</div>
-    <ca-headline v-bind="HeadlineProps" />
-    <div class="title">使用二：自定义插槽</div>
-    <ca-headline v-bind="HeadlineProps">
-      <template #title>
-        <div class="title">{{ '插槽渲染的title' }}</div>
-      </template>
-      <template #ccc>
-        <div class="ccc">我是插槽ccc的内容</div>
-      </template>
-    </ca-headline>
-    <div class="title">使用三:设置宽高适配</div>
-    <ca-headline
-      v-bind="{
-        ...HeadlineProps,
-        width: 960,
-        height: 44,
-        titleStyle: { 'font-size': '16px', 'padding-top': '5px' },
-      }"
-    />
-    <div class="title">内置类型:biType="centerOne"</div>
-    <ca-headline biType="centerOne" />
-    <div class="title">内置类型:biType="centerTwo"</div>
-    <ca-headline biType="centerTwo" />
-    <div class="title">内置类型:biType="centerThree"</div>
-    <ca-headline biType="centerThree" />
-    <div class="title">内置类型:biType="leftOne"</div>
-    <ca-headline biType="leftOne" />
-    <div class="title">内置类型:biType="leftTwo"</div>
-    <ca-headline biType="leftTwo" />
+    <div class="title">默认样式(contain模式)</div>
+    <ca-backdrop >这是容器内容</ca-backdrop>
+    <div class="title">cover模式</div>
+    <ca-backdrop mode="cover" name="ROOT_BOX1">这是容器内容</ca-backdrop>
+    <div class="title">指定缩放比例宽960高540缩放[0.5,0.25]</div>
+    <ca-backdrop name="ROOT_BOX2" width="960" height="540" :mode="[0.5,0.25]">这是容器内容</ca-backdrop>
+    <div class="title">内置类型:biType="one"</div>
+    <ca-backdrop biType="one" name="ROOT_BOX3">这是容器内容</ca-backdrop>
+    <div class="title">内置类型:biType="two"</div>
+    <ca-backdrop biType="two" name="ROOT_BOX4">这是容器内容</ca-backdrop>
+    <div class="title">内置类型:biType="three"</div>
+    <ca-backdrop biType="three" name="ROOT_BOX5">这是容器内容</ca-backdrop>
+    <div class="title">内置类型:biType="four"</div>
+    <ca-backdrop biType="four" name="ROOT_BOX6">这是容器内容</ca-backdrop>
+    <div class="title">内置类型:biType="five"</div>
+    <ca-backdrop biType="five" name="ROOT_BOX7">这是容器内容</ca-backdrop>
   </div>
 </template>
 
-<script setup name="ca-headline">
-import caHeadline from '../index.js';
+<script setup name="ca-backdrop">
+import caBackdrop from '../index.js';
 import { ref, defineOptions } from 'vue';
 import bg from './assets/bg1.png';
-const HeadlineProps = ref({
+const BackdropProps = ref({
   backgroundImg: bg,
   title: '传入的title',
-  height: 88,
   bgStyle: {},
-  titleStyle: {
-    'font-size': '38px',
-    'padding-top': '8px',
-  },
 });
 defineOptions({
   name: 'ca-backdrop',
@@ -61,13 +40,15 @@ defineOptions({
   background-color: #000000;
   color: #fff;
   height: 100%;
-  > .title {
+  >.title {
     margin-top: 20px;
     font-size: 14px;
+    overflow: hidden;
   }
   .title {
     font-size: 30px;
     padding-top: 15px;
+    overflow: hidden;
   }
 }
 </style>

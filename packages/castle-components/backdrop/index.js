@@ -1,7 +1,7 @@
 import { withInstall } from '../../utils/install'
-import '@castle-screen/theme-chalk/dist/css/headline.css'
-import Headline from './src/index.vue'
-Headline.name = 'caHeadline'
-export const caHeadline = withInstall(Headline)
-export default caHeadline
+import '@castle-screen/theme-chalk/dist/css/backdrop.css'
+import Backdrop from './src/index.vue'
+Backdrop.name = 'caBackdrop'
+export const caBackdrop = withInstall(Backdrop)
+export default caBackdrop
 export * from './src/index.vue'
