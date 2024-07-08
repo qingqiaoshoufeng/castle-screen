@@ -1,0 +1,9 @@
+.castle-empty{
+  object-fit: fill;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
